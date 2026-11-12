@@ -44,4 +44,7 @@ unproven. First run will ask for Accessibility and Input Monitoring; Marko grant
    `CGEventSource` user data instead and filter on that.
 3. Add a Star row in the group "Keyboard and mouse" (STAR_SWIFT `rows.json`), bundle id
    `community.auroville.keyboardmouserouter`.
-4. Teach Macro Recorder to call `/borrow` and `/return` around any plan that sends keys, so this is automatic.
+4. DONE 12.11.2026: Macro Recorder's `macro` command (MANTRA_MACRO/tools/macro) borrows before `run`, `do` and `click-text` and returns
+   after (trap on exit, also on error); tested: token received, `borrowing:true` during the action, returned after. `MACRO_GUARD=0` skips it.
+   A second app, Keyboard and Mouse Guard (repo KEYBOARD_MOUSE_GUARD, 12.11.2026), was built by mistake before this Router was found; it is quit
+   and not used. Marko decides whether it is deleted.
