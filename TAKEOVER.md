@@ -22,6 +22,12 @@ everything he typed meanwhile are given straight back.
 | Giving back | pointer warped to the exact pixel it was on, his frontmost app activated again, badge gone |
 | Never trapped | an automatic return after the requested seconds (max 120), Escape held two seconds returns at once, and a menu switch turns the whole behaviour off |
 
+## The icon
+Black, the letters KEY over MSE, a cursor behind them: `icon/six_1024.png`, made by `STAR_SWIFT/icons6` from the row
+`["kmrouter","KEY","MSE","sf:cursorarrow"]` in the category "Between Marko and Claude" (#000000). `build.sh` turns it
+into the iconset. Marko, 12.11.2026: every Swift app gets its icon in the same turn it is built - see
+MANTRA_MANIFEST modules/six-letter-icon.md and `icon/README.md`.
+
 ## The API (127.0.0.1:8870)
 `POST /borrow {"reason":"...","seconds":20}` -> `{"ok":true,"token":"..."}` · `POST /return` · `GET /status` ·
 `POST /enabled {"on":false}`.
