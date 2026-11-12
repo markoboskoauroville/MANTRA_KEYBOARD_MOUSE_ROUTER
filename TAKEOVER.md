@@ -46,5 +46,5 @@ unproven. First run will ask for Accessibility and Input Monitoring; Marko grant
    `community.auroville.keyboardmouserouter`.
 4. DONE 12.11.2026: Macro Recorder's `macro` command (MANTRA_MACRO/tools/macro) borrows before `run`, `do` and `click-text` and returns
    after (trap on exit, also on error); tested: token received, `borrowing:true` during the action, returned after. `MACRO_GUARD=0` skips it.
-   A second app, Keyboard and Mouse Guard (repo KEYBOARD_MOUSE_GUARD, 12.11.2026), was built by mistake before this Router was found; it is quit
-   and not used. Marko decides whether it is deleted.
+   A duplicate app, Keyboard and Mouse Guard, was built by mistake before this Router was found; Marko said "delete duplicates and keep the latest"
+   and it was deleted on 12.11.2026 (repo, app, port 8965 booking). This Router is the one and only guard between Marko and Claude.
