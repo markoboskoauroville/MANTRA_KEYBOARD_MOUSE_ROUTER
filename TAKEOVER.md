@@ -1,4 +1,12 @@
-# TAKEOVER: Keyboard and Mouse Router (Mantra) — v1, 12.11.2026
+# TAKEOVER: Keyboard and Mouse Router (Mantra) — RETIRED 14.11.2026
+
+**Retired 14.11.2026: the one guard is Macro Recorder (Mantra) v27's input lock (repo MANTRA_MACRO, `guard` on the PATH,
+127.0.0.1:8829).** Why: this Router was written on 12.11.2026 but never installed or run; `macro` called it "if running,
+else as before", so for two days nothing was guarded and on 14.11.2026 Marko's typing went into a WhatsApp draft (his words
+in momentaryupdates.md). Everything this app promised (hold his hands, buffer his typing, give back app and pointer) now lives
+in MANTRA_MACRO app/Lock.swift + app/Guard.swift, plus focus/caret restore, an owner queue and a log. Do not install this app;
+do not take port 8870 for anything that guards. The history below stays as it was.
+
 
 Public, unpromoted: no README and no description by rule (MANTRA_MANIFEST modules/repo-privacy.md). This file is the description.
 
