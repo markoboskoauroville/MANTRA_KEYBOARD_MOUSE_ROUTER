@@ -9,7 +9,7 @@
 // the pointer and the front window are exactly where they were.
 import AppKit
 
-let VERSION = 1
+let VERSION = 2
 
 @main
 enum Main {
@@ -30,6 +30,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ note: Notification) {
         item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         redrawMenu()
+        HoverCard.attach(to: item, autoPipe: true) { [weak self] in
+            guard let self = self else { return HoverCard.Content(name: "Keyboard Mouse Router (Mantra)", what: "", state: "") }
+            return HoverCard.Content(name: "Keyboard Mouse Router (Mantra)", what: "Lends this Mac's keyboard and mouse to another computer", state: (self.router.isBorrowing ? "BORROWING" : (self.router.enabled ? "READY" : "OFF")), stateColor: .systemGreen, lines: ["Enabled: " + (self.router.enabled ? "yes" : "no"), "Borrowed now: " + (self.router.isBorrowing ? "yes" : "no"), "Server: port 8870"])
+        }
         router.onChange = { [weak self] in DispatchQueue.main.async { self?.redrawMenu() } }
         server = Server(router: router, port: 8870)
         server.start()
