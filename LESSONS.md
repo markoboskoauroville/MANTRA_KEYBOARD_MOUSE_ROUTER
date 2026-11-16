@@ -11,3 +11,6 @@
   while letting Macro Recorder through. Unproven in practice - verify on the first run.
 - **12.11.2026, never trap the user.** Any app that swallows input must have three ways out that do not need a working
   session: a timeout, a key held down, and a switch. All three are in v1.
+
+## Lesson: hover card and pipes (16.11.2026)
+Poll the mouse (macOS draws a status item once per display, only one copy owns the button, so a tracking area misses the other display). The panel needs `titleVisibility = .hidden` for the one-title guard. A non-activating NSPanel at statusBar+1 never takes focus. Pipes for text items: attributed title; for icon items: pipedIcon + rightPipe; for view items: drawPipes or PipesView.

@@ -56,3 +56,6 @@ unproven. First run will ask for Accessibility and Input Monitoring; Marko grant
    after (trap on exit, also on error); tested: token received, `borrowing:true` during the action, returned after. `MACRO_GUARD=0` skips it.
    A duplicate app, Keyboard and Mouse Guard, was built by mistake before this Router was found; Marko said "delete duplicates and keep the latest"
    and it was deleted on 12.11.2026 (repo, app, port 8965 booking). This Router is the one and only guard between Marko and Claude.
+
+## Menu-bar hover card and pipes (v2, 16.11.2026)
+Marko: "with all my apps on the menu bar, make a comprehensive pop-up menu. When I hover over, I want to see what is it and what is it doing." and "for my apps always make a pipes before and after so I know where one app ends and other begins." `app/HoverCard.swift` is the shared kit file (MANTRA_MANIFEST kits/menubar-hover, rule modules/menubar-hover.md): hovering the item about 0.4 s shows a card with name, what it is, state and live lines; a thin grey pipe stands before and after the visible title. The app supplies its lines in the `HoverCard.attach(...)` closure. Test without a mouse: launch with `--hovercard-shot`. Change the lines in the app; change the module only in the kit.
